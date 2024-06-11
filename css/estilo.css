@@ -1,0 +1,115 @@
+/* padding margin e flexbox para tudo */
+* {
+    padding: 0; /* padding padrão */
+    margin: 0; /*  margin padrão */
+    box-sizing: border-box; /* padding e borda no tamanho total do elemento */
+    font-family: Arial, sans-serif; /* fonte padrão como Arial, com fallback para sans-serif */
+}
+
+/* Header */
+header {
+    padding: 10px; /* padding de 10px ao redor do header */
+    background-color: rgb(21, 21, 21); /*cor de fundo do header */
+    display: flex; /* layout do header como flexbox */
+    align-items: center; /* header verticalmente ao centro */
+    justify-content: space-between; /* itens do header com espaço entre eles */
+}
+
+/* ul, li dentro do header */
+header ul, li, a {
+    display: flex; /* Define o layout dos elementos como flexbox */
+    gap: 16px; /*espaçamento de 16px entre os itens */
+    text-decoration: none; /* sublinhado dos links */
+    color: rgb(235, 235, 235); /* cor do texto dos links */
+}
+
+/* banner header */
+header .banner {
+    color: rgb(235, 235, 235); /*cor do texto do banner */
+    font-size: 26px; /* tamanho da fonte do banner */
+    font-weight: bold; /* banner como negrito */
+}
+
+/* links header */
+header a {
+    color: rgb(255, 255, 255); /* cor do texto dos links */
+    font-size: 16px; /* tamanho da fonte dos links */
+}
+
+
+/* elementos h3 */
+h3 {
+    padding: 20px; /* padding de 20px ao redor do h3 */
+    text-align: center; /* Alinha o texto do h3 ao centro */
+    font-size: 26px; /* tamanho da fonte do h3 */
+}
+
+/* elementos section */
+section {
+    display: flex; /* layout da section como flexbox */
+    justify-content: flex-start; /* itens da section ao início */
+    flex-wrap: wrap; /* Permite que os itens da section quebrem linha */
+    width: 80%; /* largura da section como 80% do container pai */
+    margin: 0 auto; /* Centraliza a section horizontalmente */
+    padding: 20px; /* padding de 20px ao redor da section */
+    color: rgb(0, 0, 0); /* cor do texto da section */
+}
+
+/* elementos article */
+article {
+    padding: 20px; /* padding de 20px ao redor do article */
+    flex-grow: 1; /* Permite que o article cresça conforme necessário */
+    width: 270px; /* largura mínima do article */
+    max-width: 600px; /* largura máxima do article */
+}
+
+/*  elementos img */
+img {
+    width: 100%; /* largura da imagem como 100% do container pai */
+    height: auto; /* altura da imagem automaticamente */
+    max-width: 600px; /*  largura máxima da imagem */
+}
+
+/*  elementos p */
+p {
+    font-weight: bold; /* peso da fonte do parágrafo como negrito */
+    text-align: center; /*texto do parágrafo ao centro */
+}
+
+
+/* Estilos para dispositivos com largura máxima de 799px */
+@media (max-width: 799px) {
+header {
+    display: grid; /* layout do header como grid */
+    grid-template-columns: auto 1fr; /* duas colunas no grid */
+    align-items: center; /* itens do header verticalmente ao centro */
+    height: auto; /* altura do header automaticamente */
+    }
+header ul, li, a {
+    gap: 3px; /* espaçamento de 3px entre os itens */
+    }
+header a {
+    font-size: 45px; /* tamanho da fonte dos links no header */
+    margin-left: 40px; /* margem à esquerda dos links */
+    }
+header nav a {
+    margin-left: 0px; /*  margem à esquerda dos links no nav */
+    font-size: 20px; /* tamanho da fonte dos links no nav */
+    }
+header nav li {
+    background-color: rgb(226, 223, 223); /* cor de fundo dos itens da lista no nav */
+    width: 100%; /* largura dos itens da lista no nav como 100% */
+    }
+nav {
+    justify-self: end; /* nav ao final do container pai */
+    }
+nav ul {
+    display: flex; /* layout da lista no nav como flexbox */
+    flex-direction: column; /* a direção dos itens da lista como coluna */
+    align-items: flex-start; /* alinha os itens da lista ao início */
+    }
+nav ul li {
+    margin: 10px 0; /* margem de 10px acima e abaixo dos itens da lista */
+    text-align: start; /* alinha o texto dos itens da lista ao início */
+    }
+}
